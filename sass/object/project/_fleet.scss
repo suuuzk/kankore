@@ -1,0 +1,137 @@
+.fleet{
+    border-left: 2px solid transparent;
+    padding: 16px;
+    overflow: hidden;
+    border-bottom: 1px solid #e5e5e5;
+    @include anime(border-color linear .1s);
+    &:last-child{
+        border-bottom: 0;
+    }
+}
+.fleet_number{
+    float: left;
+    color: #e5e5e5;
+    font-size: 36px;
+    max-width: 180px;
+}
+.fleet_input{
+    float: left;
+    margin-left: 16px;
+}
+.fleet_inputNo{
+    text-align: center;
+    padding: 4px;
+    height: 36px;
+    box-sizing: border-box;
+    width: 64px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    color: inherit;
+    @include anime(border-color linear .1s);
+    &:focus{
+        border-bottom-color: $pointColor;
+    }
+}
+.fleet_inputHours{
+    width: 32px;
+    margin-left: 8px;
+    @extend .fleet_inputNo;
+}
+.fleet_inputMinutes{
+    width: 32px;
+    @extend .fleet_inputNo;
+}
+.fleet_submit{
+    float: right;
+    margin-left: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 32px;
+    @include lheight(32px);
+    border-radius: 50%;
+    color: #ccc;
+    &:before{
+        content: '\f0f3';
+        font-family: icon;
+        font-size: 18px;
+    }
+    &:hover{
+        color: $pointColor;
+    }
+    &:active{
+        background: #eee;
+        color: $pointColor;
+    }
+}
+
+.fleet_output{
+    display: none;
+}
+
+.fleet_outputHours{
+    display: inline-block;
+    width: 48px;
+    text-align: right;
+}
+.fleet_outputMinutes{
+    
+}
+.fleet_complet{
+    display: none;
+}
+
+.fleet-count{
+    @extend .fleet;
+    .fleet_input{
+        display: none;
+    }
+    .fleet_submit{
+        color: $pointColor;
+        &:hover,&:active{
+            color: #ccc;
+            &:before{
+                content: '\f1f6';
+                }
+        }
+    }
+    .fleet_output{
+        display: block;
+        float: left;
+        margin-left: 16px;
+        max-width: 180px;
+        font-size: 32px;
+        color: #aaa;
+        @include lheight(36px);
+        letter-spacing: 2px;
+    }
+}
+
+.fleet-clear{
+    @extend .fleet;
+    padding-left: 14px;
+    border-left: 2px solid $pointColor;
+    .fleet_input{
+        display: none;
+    }
+    .fleet_number{
+        color: $pointColor;
+    }
+    .fleet_complet{
+        display: block;
+        float: left;
+        margin-left: 16px;
+        max-width: 180px;
+        font-size: 32px;
+        color: #aaa;
+    }
+    .fleet_submit{
+        color: $pointColor;
+        &:hover,&:active{
+            color: #ccc;
+        }
+        &:before{
+            content: '\f00c';
+        }
+    }
+}

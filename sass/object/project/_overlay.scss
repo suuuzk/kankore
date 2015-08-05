@@ -1,0 +1,58 @@
+.overlay{
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.2);
+}
+.overlay-off{
+    @extend .overlay;
+    display: none;
+}
+.overlay_window{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    padding: 32px;
+}
+.overlay_title{
+    @include lheight(44px);
+    margin-bottom: 12px;
+    font-size: 18px;
+
+}
+.overlay_text{
+    line-height: 1.8;
+}
+.overlay_btnWrap{
+    text-align: right;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+.overlay_btn-off{
+    margin-left: 16px;
+    display: inline-block;
+    @include lheight(44px);
+    cursor: pointer;
+    padding: 0 16px;
+    text-shadow: 0 0 3px rgba($pointColor,0);
+    @include anime(all .3s linear);
+    &:active{
+        position: relative;
+        top: 1px;
+    }
+}
+.overlay_btn-on{
+    @extend .overlay_btn-off;
+    color: $pointColor;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <script src="js/common.js"></script>
+    </head>
+    <body>
+        <div class="overlay-off">
+            <div class="overlay_window">
+                <h2 class="overlay_title">確認</h2>
+                <p class="overlay_text">本当にタイマーを解除してよろしいですか？</p>
+                <div class="overlay_btnWrap">
+                    <div class="overlay_btn-off">cancel</div>
+                    <div class="overlay_btn-on">OK</div>
+                </div>
+            </div>
+        </div>
+        <div class="messageBox-off" id="messageBox">
+            <div class="messageBox_text">タイマーを解除しました。</div>
+            <div class="messageBox_btn" id="messageBox_undo">取消</div>
+        </div>
+        <header class="header">
+            <h1 class="header_title">timer</h1>
+            <nav class="header_nav">
+                O
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contents">
+            <ul>
+                <li id="fleet2" class="fleet">
+                    <h2 class="fleet_number">02</h2>
+                    <div class="fleet_input">
+                            <input type="text" class="fleet_inputNo" placeholder="No">
+                            <input type="text" class="fleet_inputHours" placeholder="24">
+                            :
+                            <input type="text" class="fleet_inputMinutes" placeholder="00">
+                    </div>
+                    <div class="fleet_output">
+                        <span class="fleet_outputHours">80</span>:<span class="fleet_outputMinutes">00</span>:<span class="fleet_outputSecond">00</span>
+                    </div>
+                    <div class="fleet_complet">
+                        complet!
+                    </div>
+                    <div class="fleet_submit" id="fleet2_submit"></div>
+                </li>
+                <li id="fleet3" class="fleet">
+                    <h2 class="fleet_number">03</h2>
+                    <div class="fleet_input">
+                            <input type="text" class="fleet_inputNo" placeholder="No">
+                            <input type="text" class="fleet_inputHours" placeholder="24">
+                            :
+                            <input type="text" class="fleet_inputMinutes" placeholder="00">
+                    </div>
+                    <div class="fleet_output">
+                        <span class="fleet_outputHours">80</span>:<span class="fleet_outputMinutes">00</span>:<span class="fleet_outputSecond">00</span>
+                    </div>
+                    <div class="fleet_complet">
+                        complet!
+                    </div>
+                    <div class="fleet_submit" id="fleet3_submit"></div>
+                </li>
+                <li id="fleet4" class="fleet">
+                    <h2 class="fleet_number">04</h2>
+                    <div class="fleet_input">
+                            <input type="text" class="fleet_inputNo" placeholder="No">
+                            <input type="text" class="fleet_inputHours" placeholder="24">
+                            :
+                            <input type="text" class="fleet_inputMinutes" placeholder="00">
+                    </div>
+                    <div class="fleet_output">
+                        <span class="fleet_outputHours">80</span>:<span class="fleet_outputMinutes">00</span>:<span class="fleet_outputSecond">00</span>
+                    </div>
+                    <div class="fleet_complet">
+                        complet!
+                    </div>
+                    <div class="fleet_submit" id="fleet4_submit"></div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+.messageBox{
+    background: rgba(0,0,0,.6);
+    color: #ddd;
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    overflow: hidden;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+    border-radius: 3px;
+    @include anime(all ease-in-out .1s);
+}
+.messageBox-off{
+    @extend .messageBox;
+    bottom: -50px;
+}
+.messageBox-on{
+    @extend .messageBox;
+}
+.messageBox_text{
+    float: left;
+}
+.messageBox_btn{
+    margin-left: 16px;
+    float: left;
+    cursor: pointer;
+    @include anime(all linear .2s);
+    &:hover{
+        color: $pointColor;
+    }
+    &:active{
+        top: 1px;
+        position: relative;
+    }
+}

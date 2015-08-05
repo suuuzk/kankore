@@ -1,0 +1,53 @@
+@charset "utf-8";
+@import "compass";
+
+//**********************************************
+//					mixin
+//**********************************************/
+
+//ユーティリティ
+
+@mixin clearfix {
+	zoom: 1;
+	&:before,
+		&:after {
+		display: block;
+		height: 0;
+		visibility: hidden;
+		content: "\0020";
+	}
+	&:after {
+		clear: both;
+	}
+}
+@mixin anime($text){
+	-webkit-transition:$text;
+	-moz-transition:$text;
+	-o-transition:$text;
+	transition:$text;
+}
+@mixin lheight($size) {
+	line-height: $size;
+	height: $size;
+}
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacityIE: $opacity * 100;
+	filter: alpha(opacity=$opacityIE);
+}
+@mixin bggrd($bg_color,$from,$to){
+	background: $bg_color;
+	@include background(linear-gradient(top, $from 0%, $to 100%));
+}
+@mixin css3($property, $value) {
+	@each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+		#{$prefix}#{$property}: $value;
+	}
+}
+
+
+//font
+$fontsize: 14px;
+$basecolor: #555;
+$mainColor: #26a69a;
+$pointColor: #FF3D00;

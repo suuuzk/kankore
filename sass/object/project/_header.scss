@@ -1,0 +1,17 @@
+.header{
+    background: $mainColor;
+    color: #fff;
+    box-shadow: 0 2px 5px #aaa;
+    position: relative;
+}
+.header_title{
+    text-align: center;
+    font-weight: normal;
+    @include lheight(44px);
+    font-size: 24px;
+}
+.header_nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
